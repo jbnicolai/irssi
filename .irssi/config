@@ -91,6 +91,7 @@ chatnets = {
     max_kicks = "1";
     max_msgs = "3";
     max_whois = "30";
+    autosendcmd = "/msg nickserv identify jbnicolai";
   };
   LinkNet = {
     type = "IRC";
@@ -99,20 +100,19 @@ chatnets = {
     max_whois = "30";
   };
   SILC = { type = "SILC"; };
-  freenode = { type = "IRC"; };
-  "irc.freenode.net" = {
+  freenode = {
     type = "IRC";
     autosendcmd = "/msg nickserv identify jbnicolai";
-  };
-  "/msg nickserv identify jbnicolai" = {
-    type = "IRC";
-    autosendcmd = "/nick jbnicolai";
   };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
+  { name = "#uva"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#hetgrotebos"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#xebia"; chatnet = "freenode"; autojoin = "Yes"; },
+  { name = "#lesswrong"; chatnet = "freenode"; autojoin = "Yes"; },
 );
 
 aliases = {
